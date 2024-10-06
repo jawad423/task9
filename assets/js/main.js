@@ -6,11 +6,11 @@ var priceinput = document.querySelector("#price");
 
 var products = [];
 
-registerform.onsubmit = function(e){
+registerform.onclick = function(e){
     e.preventDefault();
 
     console.log("e");
-    var user = {
+    var product = {
         name: nameinput.value,
         number: numberinput.value,
         price: priceinput.value,
@@ -25,7 +25,7 @@ printdata();
 
 function printdata(){
     var data = `  `;
-    for(var i = 0; i < users.length; i++) {
+    for(var i = 0; i < products.length; i++) {
         data += 
         `<tr>
         <td>${products[i].name}</td>
